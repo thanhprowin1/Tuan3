@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Products Dashboard</h1>
+    <input type="text" id="search-input" placeholder="Search by title...">
+    <div class="controls">
+        <label for="items-per-page">Items per page:</label>
+        <select id="items-per-page">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+        </select>
+    </div>
+    <table id="products-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Title <button onclick="sortBy('title', 'asc')">↑</button><button onclick="sortBy('title', 'desc')">↓</button></th>
+                <th>Price <button onclick="sortBy('price', 'asc')">↑</button><button onclick="sortBy('price', 'desc')">↓</button></th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody id="products-body">
+            <!-- Products will be inserted here -->
+        </tbody>
+    </table>
+    <div id="pagination" class="pagination"></div>
+    <script src="script.js"></script>
+</body>
+</html>
